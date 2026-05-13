@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | MYORG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span class="logo-text">MYORG</span></a>
+            <button class="mobile-toggle" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html" class="active">Programs</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="stories.html">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Our Programs</h1>
+                <p>Strategic thematic areas for community transformation</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="grid grid-3">
+                <div class="card">
+                    <i data-lucide="heart" class="icon-primary"></i>
+                    <h3>Welfare & Psychosocial Support</h3>
+                    <p>Providing essential care and emotional support to vulnerable groups.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="trending-up" class="icon-primary"></i>
+                    <h3>Economic Empowerment</h3>
+                    <p>Enabling financial independence through micro-finance and trade.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="graduation-cap" class="icon-primary"></i>
+                    <h3>Education & Child Protection</h3>
+                    <p>Ensuring every child has a safe environment to learn and grow.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="hammer" class="icon-primary"></i>
+                    <h3>Livelihood & Skills Development</h3>
+                    <p>Vocational training to build marketable professional skills.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="users" class="icon-primary"></i>
+                    <h3>Advocacy & Community Engagement</h3>
+                    <p>Giving a voice to the community and driving social change.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="shield-check" class="icon-primary"></i>
+                    <h3>SRHR & SGBV</h3>
+                    <p>Sexual Reproductive Health Rights and prevention of Gender Based Violence.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MYORG. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

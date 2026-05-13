@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYORG - News & Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">MYORG<span>.</span></a>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="stories.html">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section-padding" style="background-color: var(--primary-blue); color: white;">
+        <div class="container text-center">
+            <h1>News & Updates</h1>
+            <p>Stay informed about our latest activities and events.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="mb-40">
+                <input type="text" class="form-control" placeholder="Search news..." style="max-width: 300px;">
+            </div>
+
+            <div class="card-grid">
+                <!-- News Item 1 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 1" class="card-img-top">
+                    <div class="card-body">
+                        <small style="color: #777;">October 15, 2026 | Education</small>
+                        <h3 class="card-title">New School Block Commissioned</h3>
+                        <p>We are thrilled to announce the opening of a new classroom block at Ave Primary School, funded by our generous donors.</p>
+                        <a href="#" style="color: var(--primary-orange); font-weight: 600;">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 2" class="card-img-top">
+                    <div class="card-body">
+                        <small style="color: #777;">September 28, 2026 | Events</small>
+                        <h3 class="card-title">Community Health Awareness Day</h3>
+                        <p>Over 500 community members attended our health fair, receiving free screenings and information on sanitation and hygiene.</p>
+                        <a href="#" style="color: var(--primary-orange); font-weight: 600;">Read More &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 3" class="card-img-top">
+                    <div class="card-body">
+                        <small style="color: #777;">August 10, 2026 | Advocacy</small>
+                        <h3 class="card-title">International Youth Day Celebrations</h3>
+                        <p>MYORG youth leaders took center stage to advocate for increased youth participation in local governance.</p>
+                        <a href="#" style="color: var(--primary-orange); font-weight: 600;">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <div class="pagination">
+                    <a href="#" class="btn btn-outline" style="border-color: #ddd; color: #333; margin: 0 5px;">&laquo; Prev</a>
+                    <a href="#" class="btn btn-primary" style="margin: 0 5px;">1</a>
+                    <a href="#" class="btn btn-outline" style="border-color: #ddd; color: #333; margin: 0 5px;">2</a>
+                    <a href="#" class="btn btn-outline" style="border-color: #ddd; color: #333; margin: 0 5px;">3</a>
+                    <a href="#" class="btn btn-outline" style="border-color: #ddd; color: #333; margin: 0 5px;">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MYORG</h3>
+                    <p>Empowering Communities for a Sustainable Future.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="stories.html">Impact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>Ave Sub County, Ave District, Aveland</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: myorgaveland@gmail.com</p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> MYORG. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ave Dining - Modern Dining Experience</title>
+    <meta name="description" content="Experience the finest culinary delights at Ave Dining. Fresh ingredients, unforgettable ambiance.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Ave Dining</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#order" class="cart-btn">
+                        Order <span id="cart-count" class="badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Taste the Extraordinary</h1>
+            <p>A culinary journey inspired by tradition and crafted with passion.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reservations" class="btn btn-secondary">Reserve a Table</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Information -->
+    <section id="info" class="section bg-light">
+        <div class="container grid-2">
+            <div class="info-card">
+                <h3>📍 Visit Us</h3>
+                <p>123 Culinary Avenue, Foodie City, FC 90210</p>
+                <!-- Embedded Map Placeholder -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1510515009909" 
+                        width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="info-card">
+                <h3>📞 Contact & Hours</h3>
+                <p><a href="tel:+15551234567" class="contact-link">Phone: (555) 123-4567</a></p>
+                <p><a href="mailto:hello@avedining.com" class="contact-link">Email: hello@avedining.com</a></p>
+                
+                <div class="hours-list">
+                    <h4>Hours of Operation</h4>
+                    <ul>
+                        <li><span>Mon - Thu:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Fri - Sat:</span> 11:00 AM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 10:00 AM - 9:00 PM (Brunch until 2PM)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="section">
+        <div class="container grid-2 align-center">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Founded in 2015, Ave Dining began with a simple mission: to bring authentic flavors to the modern table. Our chefs use only the freshest, locally sourced ingredients to create dishes that tell a story.</p>
+                <p>Whether you're joining us for a casual lunch or a celebratory dinner, we promise an atmosphere of warmth and a meal you won't forget.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/burger.png" alt="Signature Burger Dish" class="rounded shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Explore our carefully curated selection of dishes.</p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="starters">Starters</button>
+                <button class="filter-btn" data-category="mains">Mains</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div id="menu-grid" class="menu-grid">
+                <!-- Menu items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Ordering / Cart -->
+    <section id="order" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Order</h2>
+            </div>
+            
+            <div class="cart-container">
+                <div class="order-options">
+                    <button class="btn btn-outline active" id="btn-pickup">Pickup</button>
+                    <button class="btn btn-outline" id="btn-delivery">Delivery</button>
+                </div>
+
+                <div id="cart-items" class="cart-items">
+                    <p class="empty-cart-msg">Your cart is empty.</p>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="total-row">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="btn btn-primary full-width" disabled>Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations -->
+    <section id="reservations" class="section bg-dark text-white">
+        <div class="container narrow">
+            <div class="section-header">
+                <h2>Book a Table</h2>
+                <p>Join us for an unforgettable evening.</p>
+            </div>
+
+            <form id="reservation-form" class="form-grid">
+                <div class="form-group">
+                    <label for="res-name">Name</label>
+                    <input type="text" id="res-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-email">Email</label>
+                    <input type="email" id="res-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-phone">Phone</label>
+                    <input type="tel" id="res-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-guests">Guests</label>
+                    <select id="res-guests" required>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6+">6+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="res-date">Date</label>
+                    <input type="date" id="res-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="res-time">Time</label>
+                    <input type="time" id="res-time" required>
+                </div>
+                <div class="form-group full">
+                    <button type="submit" class="btn btn-primary full-width">Confirm Reservation</button>
+                </div>
+            </form>
+            <div id="reservation-message" class="message hidden"></div>
+        </div>
+    </section>
+
+    <!-- Special Offers & Events -->
+    <section id="events" class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="special-offers">
+                    <h3>🔥 Special Offers</h3>
+                    <div class="offer-banner">
+                        <h4>Happy Hour</h4>
+                        <p>50% off all appetizers and drinks every weekday from 4PM - 6PM!</p>
+                    </div>
+                    <div class="offer-banner secondary">
+                        <h4>Weekend Brunch</h4>
+                        <p>Bottomless Mimosas with any main course.</p>
+                    </div>
+                </div>
+                
+                <div class="upcoming-events">
+                    <h3>📆 Upcoming Events</h3>
+                    <ul id="events-list" class="events-list">
+                        <!-- Events loaded via JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Cards & Newsletter -->
+    <section id="gifts" class="section bg-light">
+        <div class="container grid-2">
+            <div class="gift-cards">
+                <h3>🎁 Give the Gift of Taste</h3>
+                <form id="gift-card-form" class="simple-form">
+                    <select id="gift-amount">
+                        <option value="25">$25 Gift Card</option>
+                        <option value="50">$50 Gift Card</option>
+                        <option value="100">$100 Gift Card</option>
+                    </select>
+                    <button type="submit" class="btn btn-secondary">Purchase</button>
+                </form>
+                <div id="gift-message" class="message hidden"></div>
+            </div>
+            
+            <div class="newsletter">
+                <h3>💌 Join Our Loyalty Program</h3>
+                <p>Sign up for exclusive offers and updates.</p>
+                <form id="newsletter-form" class="simple-form">
+                    <input type="email" id="news-email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <div id="news-message" class="message hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering -->
+    <section id="catering" class="section">
+        <div class="container narrow text-center">
+            <h3>Catering & Private Events</h3>
+            <p>Planning a special event? Let us handle the food. We offer full-service catering for weddings, corporate events, and parties.</p>
+            <a href="mailto:events@avedining.com" class="btn btn-outline">Inquire Now</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-dark text-white text-center">
+        <div class="container narrow">
+            <h3>Guest Love</h3>
+            <div class="testimonial-slider" id="testimonial-container">
+                <blockquote id="testimonial-text">"The best dining experience I've had in years. The burger is a must-try!"</blockquote>
+                <cite id="testimonial-author">- Jane Doe</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>Ave Dining</h4>
+                    <p>Authentic Flavors, Modern Vibes.</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservations">Reservations</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ave Dining. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

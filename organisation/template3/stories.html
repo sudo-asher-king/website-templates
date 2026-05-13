@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Stories | MYORG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span class="logo-text">MYORG</span></a>
+            <button class="mobile-toggle" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="stories.html" class="active">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Stories & Impact</h1>
+                <p>Voices from the communities we serve</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="grid grid-2">
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="https://images.unsplash.com/photo-1507537509458-b8312d35a233?auto=format&fit=crop&q=80&w=800" alt="Sarah" style="width:100%; height:250px; object-fit:cover;">
+                    <div style="padding:2rem;">
+                        <span style="color:var(--primary); font-weight:600;">Success Story</span>
+                        <h3>Sarah's Journey to Independence</h3>
+                        <p>Through MYORG's tailoring program, Sarah learned essential skills that allowed her to start her own business. Now she employs three other women from her village.</p>
+                        <p style="font-style:italic; margin-top:1rem;">- Sarah A., Beneficiary</p>
+                    </div>
+                </div>
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&q=80&w=800" alt="Water" style="width:100%; height:250px; object-fit:cover;">
+                    <div style="padding:2rem;">
+                        <span style="color:var(--primary); font-weight:600;">Community Impact</span>
+                        <h3>Clean Water for Ave Village</h3>
+                        <p>The new borehole installation has reduced waterborne diseases by 40% in just six months, improving the quality of life for all residents.</p>
+                        <p style="font-style:italic; margin-top:1rem;">- Community of Ave</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MYORG. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

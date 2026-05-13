@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | MYORG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span class="logo-text">MYORG</span></a>
+            <button class="mobile-toggle" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="stories.html">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Join Our Mission</h1>
+                <p>Volunteer and make a difference today</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="grid grid-2">
+                <div>
+                    <h2 class="section-title">Become a Volunteer</h2>
+                    <p>Sustainable Action for Community Development and Empowerment (MYORG) is always looking for passionate individuals to join our team. Whether you have professional skills to share or just want to help on the ground, your time makes a difference.</p>
+                    <div class="section-padding" style="padding-top:2rem;">
+                        <h3 style="margin-bottom:1rem;">Current Opportunities</h3>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 0.75rem;"><i data-lucide="check-circle" style="color:var(--accent); margin-right: 0.5rem; vertical-align: middle;"></i> Teaching & Mentorship</li>
+                            <li style="margin-bottom: 0.75rem;"><i data-lucide="check-circle" style="color:var(--accent); margin-right: 0.5rem; vertical-align: middle;"></i> Community Health Outreach</li>
+                            <li style="margin-bottom: 0.75rem;"><i data-lucide="check-circle" style="color:var(--accent); margin-right: 0.5rem; vertical-align: middle;"></i> Administrative Support</li>
+                            <li style="margin-bottom: 0.75rem;"><i data-lucide="check-circle" style="color:var(--accent); margin-right: 0.5rem; vertical-align: middle;"></i> Event Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Volunteer Application</h3>
+                    <form id="volunteerForm" style="margin-top:1.5rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display:block; margin-bottom:0.5rem;">Full Name</label>
+                            <input type="text" placeholder="Your Name" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display:block; margin-bottom:0.5rem;">Email Address</label>
+                            <input type="email" placeholder="your@email.com" style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display:block; margin-bottom:0.5rem;">Area of Interest</label>
+                            <select style="width:100%; padding:0.75rem; border:1px solid var(--border); border-radius:4px; background:white;">
+                                <option>Education</option>
+                                <option>Welfare</option>
+                                <option>Economic Empowerment</option>
+                                <option>Livelihood Development</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MYORG. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

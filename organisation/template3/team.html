@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | MYORG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span class="logo-text">MYORG</span></a>
+            <button class="mobile-toggle" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="stories.html">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Our Team</h1>
+                <p>Leadership and community commitment</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2 class="section-title">Leadership</h2>
+            <div class="grid grid-3">
+                <div class="card" style="text-align:center;">
+                    <div style="width:150px; height:150px; border-radius:50%; background:#eee; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center;">
+                        <i data-lucide="user" style="width:64px; height:64px; color:#ccc;"></i>
+                    </div>
+                    <h3>Executive Director</h3>
+                    <p style="color:var(--text-muted);">Strategic Leadership</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div style="width:150px; height:150px; border-radius:50%; background:#eee; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center;">
+                        <i data-lucide="user" style="width:64px; height:64px; color:#ccc;"></i>
+                    </div>
+                    <h3>Program Manager</h3>
+                    <p style="color:var(--text-muted);">Field Operations</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div style="width:150px; height:150px; border-radius:50%; background:#eee; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center;">
+                        <i data-lucide="user" style="width:64px; height:64px; color:#ccc;"></i>
+                    </div>
+                    <h3>Community Liaison</h3>
+                    <p style="color:var(--text-muted);">External Relations</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MYORG. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

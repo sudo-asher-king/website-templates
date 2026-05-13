@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events | MYORG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span class="logo-text">MYORG</span></a>
+            <button class="mobile-toggle" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="stories.html">Impact</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="btn btn-primary">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh;">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>News & Blog</h1>
+                <p>Latest updates from MYORG</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <div class="grid grid-3">
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800" style="width:100%; height:200px; object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                        <span style="color:var(--text-muted); font-size:0.875rem;">Oct 15, 2023</span>
+                        <h3 style="font-size:1.25rem; margin-top:0.5rem;">MYORG Launches New Education Initiative</h3>
+                        <p>Supporting primary education in Ave Sub County, providing materials to over 500 students.</p>
+                        <a href="#" class="text-link">Read More</a>
+                    </div>
+                </div>
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="https://images.unsplash.com/photo-1558486012-8181480d423f?auto=format&fit=crop&q=80&w=800" style="width:100%; height:200px; object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                        <span style="color:var(--text-muted); font-size:0.875rem;">Sep 22, 2023</span>
+                        <h3 style="font-size:1.25rem; margin-top:0.5rem;">Community Clean-up Success</h3>
+                        <p>Over 200 volunteers joined us for the quarterly clean-up drive in market areas.</p>
+                        <a href="#" class="text-link">Read More</a>
+                    </div>
+                </div>
+                <div class="card" style="padding:0; overflow:hidden;">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800" style="width:100%; height:200px; object-fit:cover;">
+                    <div style="padding:1.5rem;">
+                        <span style="color:var(--text-muted); font-size:0.875rem;">Nov 5, 2023</span>
+                        <h3 style="font-size:1.25rem; margin-top:0.5rem;">Women's Empowerment Workshop</h3>
+                        <p>Workshop on financial literacy and small business management for women entrepreneurs.</p>
+                        <a href="#" class="text-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MYORG. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Adventure Rstaurant & Winery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">STONE<span>HAVEN</span></a>
+            <div class="hamburger">☰</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="payments.html">Payments</a></li>
+                    <li><a href="events.html">Policies</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 40vh; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/food-1.jpg');">
+            <div class="container">
+                <h1>Culinary Excellence</h1>
+                <p>Explore our carefully curated seasonal menus.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="menu-tabs">
+                    <button class="tab-btn active" data-target="breakfast">Breakfast</button>
+                    <button class="tab-btn" data-target="food">Main Food</button>
+                    <button class="tab-btn" data-target="cake">Cake</button>
+                    <button class="tab-btn" data-target="drinks">Drinks</button>
+                    <button class="tab-btn" data-target="wine">Wine Cellar</button>
+                </div>
+
+                <div id="breakfast" class="menu-section active">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3rem;">
+                        <h2>Breakfast Selections</h2>
+                        <a href="assets/Adventure_BREAKFAST_MENU_2023.pdf" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Download PDF</a>
+                    </div>
+                    <div class="grid grid-2" style="gap: 4rem;">
+                        <div class="menu-item">
+                            <div>
+                                <h4>Cheese & Wild Mushroom Omelette</h4>
+                                <p>Eggs, sautéed wild mushrooms, spinach, cheddar</p>
+                            </div>
+                            <span class="price">18,000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div>
+                                <h4>Full English Breakfast</h4>
+                                <p>Sausages, bacon, toast, mushrooms, beans, eggs</p>
+                            </div>
+                            <span class="price">38,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="food" class="menu-section">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3rem;">
+                        <h2>Main Course</h2>
+                        <a href="assets/Adventure_FOOD_MENU_2026.pdf" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Download PDF</a>
+                    </div>
+                    <div class="grid grid-2" style="gap: 4rem;">
+                        <div class="menu-item">
+                            <div>
+                                <h4>Chicken Bruno</h4>
+                                <p>Butter-coated chicken breast, bacon, gorgonzola</p>
+                            </div>
+                            <span class="price">55,000</span>
+                        </div>
+                        <div class="menu-item">
+                            <div>
+                                <h4>Atlantic Fillet of Salmon</h4>
+                                <p>Grilled salmon, lemon, garlic, cashew nut sauce</p>
+                            </div>
+                            <span class="price">77,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">STONE<span>HAVEN</span></div>
+                    <p style="color: rgba(255,255,255,0.6);">Fine Dining • Premium Wines • Memorable Experiences. Join us for a journey of taste and tradition.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="menu.html">Menus</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">TripAdvisor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Adventure Rstaurant & Winery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
