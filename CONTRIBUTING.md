@@ -103,7 +103,7 @@ Maintainers will review changes; please respond to feedback and push follow-up c
 
 ## Licensing
 
-Contributions should be compatible with the repository license. You do not need to include a `LICENSE` file inside your template folder. All templates contributed within this repository shall be distributed under the MIT License described in [LICENSE.md](LICENSE.md).
+Contributions should be compatible with the repository license. You do not need to include a `LICENSE` file inside your template folder. All templates contributed within this repository shall be distributed under the MIT License described in [LICENSE.md](https://github.com/Envisage256/website-templates/blob/main/LICENSE).
 
 ---
 
