@@ -1,6 +1,6 @@
 # Contributing to website-templates
 
-Thanks for wanting to contribute! This repository collects small website templates and starter kits — to keep things consistent and easy to use we ask contributors to follow the structure and rules below.
+Thanks for wanting to contribute! This repository collects small website templates and starter kits. To keep submissions consistent and easy to manage, please follow the structure and rules below.
 
 If you are making non-template changes (docs, CI, tooling), the workflow is the same but you can skip the template checklist.
 
@@ -8,147 +8,121 @@ If you are making non-template changes (docs, CI, tooling), the workflow is the 
 
 ## Quick start
 
-1. Fork the repository and create a feature branch from the default branch, e.g. `feat/add-<template-name>`.
-2. Add your template following the required folder structure (see below).
-3. Run the checklist locally (validate HTML/CSS/JS, open `index.html` in a browser, include screenshot/preview).
-4. Push your branch and open a pull request describing the template and including the completed checklist.
+1. Fork the repository and create a feature branch from the default branch, e.g. `feat/add-templateN-in-<category>`.
+2. Under the `templates/` directory, find the category folder that matches your template (see "Categories" below). If the category folder does not exist, create it.
+3. Create a new folder for your template named using the format `template<number>` where `<number>` is the next available integer (see "Naming rules" below). Example: `templates/business/template7/`.
+4. Add the required files (index.html, README.md, styles.css, script.js) to the template folder root — do not add nested asset folders.
+5. Push your branch and open a pull request describing the template and including the completed checklist.
 
 ---
 
-## Required folder structure
+## Categories
 
-All templates must live inside the `templates/` directory at the repo root. Each template gets its own folder named using kebab-case (lowercase, dashes, no spaces). Example:
+All templates are grouped by category. Place your template into an appropriate category folder inside `templates/`. Example category names used in the repo include:
+
+- business
+- organisation
+- restaurants
+- education
+
+If one of these fits your template, add it there. If a suitable category does not exist, create a new category folder under `templates/` using a single-word, lowercase name (kebab-case allowed) and put your `template<number>` folder inside it.
+
+Example structure:
 
 templates/
-  my-cool-template/
-    index.html
-    README.md
-    meta.json
-    preview.png
-    assets/
-      css/
-        main.css
-      js/
-        main.js
-      images/
-        hero.jpg
-
-Required files and their purpose:
-
-- `templates/<template-name>/index.html` — The main entry file for the template. Must use only relative links for local assets.
-- `templates/<template-name>/README.md` — Short README describing the template, supported browsers, any build steps, and usage instructions (how to open the demo locally). Include a short example of how to integrate the template.
-- `templates/<template-name>/meta.json` — Minimal JSON metadata to help automations and the maintainer review. Example schema below.
-- `templates/<template-name>/preview.png` — Small preview image (recommended dimensions: 1280×720 or 800×450). If you prefer WebP, add `preview.webp` in addition to `preview.png`.
-- `templates/<template-name>/assets/` — A subfolder that contains `css/`, `js/`, and `images/` or similarly organized asset folders. Keep generated/minified output and source files together in clearly labeled files (e.g., `main.css` and `main.min.css`).
-
-Optional but recommended:
-
-- `templates/<template-name>/LICENSE` — If your template is under a different license than the repository, include a copy here and make sure it's compatible.
-- `templates/<template-name>/demo/` — A self-contained demo directory if the template requires build steps or routing (e.g., `demo/index.html`).
-- `templates/<template-name>/src/` — Source files (Sass, TypeScript) if you include prebuilt assets; also include the compiled `assets/` files alongside.
-
-meta.json example (required fields):
-
-{
-  "name": "My Cool Template",
-  "slug": "my-cool-template",
-  "description": "A brief one-line description",
-  "author": "Your Name",
-  "version": "1.0.0",
-  "tags": ["landing", "responsive", "one-page"]
-}
-
-Make sure `slug` matches the folder name.
+  business/
+    template1/
+      index.html
+      README.md
+      styles.css
+      script.js
+  restaurants/
+    template2/
+      index.html
+      README.md
+      styles.css
+      script.js
 
 ---
 
-## Naming conventions and file rules
+## Naming rules for template folders
 
-- Template folder: kebab-case (`my-template-name`).
-- Filenames: use lowercase and dashes where appropriate. Avoid spaces.
-- Use only relative paths to assets inside the template so users can download and open locally.
-- External resources (CDN-hosted fonts, icons) are allowed but document them in the template README and include fallback instructions.
-- Do not include tracking, analytics, or any third-party code that collects user data without explicit disclosure in the README.
+- Template folder name MUST be in the format `template<number>` (for example `template1`, `template2`, `template15`).
+- Choose the next available number for the category you are adding to. If the highest existing template is `template6`, name yours `template7`.
+- Do not include the template name or author in the folder name — keep the numbered format so automated tooling and reviewers can easily process submissions.
+
+---
+
+## Required files (strict)
+
+Each `template<number>` folder MUST contain the following files at the folder root (no subfolders):
+
+- `index.html` — the main entry file. Use only relative links for local assets so users can open the file locally.
+- `README.md` — short README describing the template, supported browsers, usage instructions (how to open the demo locally), and any external dependencies.
+- `styles.css` — main stylesheet for the template.
+- `script.js` — main JavaScript for the template (may be an empty file if no JS is required).
+
+Important: Do not create nested `assets/`, `src/`, or `demo/` folders inside the template folder — keep files flat at the template root. This repo currently relies on the flat layout for automated processing.
+
+Note: `preview.png`, `meta.json`, separate `LICENSE` files, or additional folders are NOT required. If you include extra files, keep them minimal and documented in the README, but reviewers may ask to remove unnecessary files.
+
+---
+
+## File content guidance
+
+- index.html: use semantic HTML, include images with `alt` text, and use relative paths (e.g., `styles.css`, `script.js`).
+- README.md: include a short description (one or two lines), dependencies (if any), and instructions to open the template locally: `open templates/<category>/templateN/index.html`.
+- styles.css and script.js: keep the files in the template root and minimize external dependencies. If you must reference a CDN (fonts, icons), document it in the README.
 
 ---
 
 ## Quality checklist (must be completed before opening a PR)
 
-- [ ] The template lives in `templates/<kebab-case-name>/` and `meta.json` slug matches the folder name.
-- [ ] `index.html` opens locally and displays correctly (no 404 assets).
-- [ ] README.md included and explains usage, build steps (if any), and license.
-- [ ] Accessibility basics: images have `alt` text, semantic headings used, and keyboard navigability for interactive controls.
-- [ ] Responsive: layout works on narrow/mobile widths (<= 480px) and on desktop.
-- [ ] No inline secrets, API keys, or tracking code.
-- [ ] Preview image included (`preview.png` or `preview.webp`) and referenced in README.
-- [ ] Images optimized (reasonable file size) and CSS/JS not unnecessarily bloated.
-- [ ] If you included third-party assets, document their sources and licenses.
-- [ ] If the template contains prebuilt/minified files, include the unminified source or explain how to rebuild.
+- [ ] Template folder is named `template<number>` and placed inside the correct category folder under `templates/`.
+- [ ] `index.html`, `README.md`, `styles.css`, and `script.js` are present in the template folder root.
+- [ ] `index.html` opens locally and renders without missing assets (no 404s).
+- [ ] Basic accessibility: images have `alt` text, headings are semantic, and interactive elements are keyboard-accessible.
+- [ ] Responsive: layout works on small mobile widths and desktop widths.
+- [ ] No secrets or tracking code included.
+- [ ] README documents any external resources and how to open the template locally.
 
-Include this checklist in your PR description (you can copy-paste and tick items).
+Include this checklist in your PR description (copy-paste and tick items).
 
 ---
 
 ## Pull request guidelines
 
-- PR title format: `Add template: <template-name>` or `Fix template: <template-name>`.
+- PR title format: `Add template: templates/<category>/template<number>` or `Fix template: templates/<category>/template<number>`.
 - In the PR description include:
-  - A short summary of the template and intended use-cases.
-  - A preview image (paste or link) and steps to view locally.
-  - The completed checklist above.
-  - Notes about any external dependencies or build steps.
-- If your change updates a shared index or listing file, update it in the same PR.
+  - A short summary of the template and its intended use case.
+  - The checklist above, completed.
+  - Any notes about external dependencies.
+- If you created or updated a category listing file (if present), update it in the same PR.
 
-Maintainers will try to review within a few days; be responsive to feedback and push follow-up commits to the same PR.
+Maintainers will review changes; please respond to feedback and push follow-up commits to the same PR.
 
 ---
 
 ## Licensing
 
-All contributions should be compatible with the repository license. If your template uses a different license, include a `LICENSE` file in the template folder and mention it in the README and PR.
-
-If you are contributing original work, including a short license header in `README.md` and supplying a `LICENSE` in the repo root (if not present) helps avoid confusion.
+Contributions should be compatible with the repository license. You do not need to include a `LICENSE` file inside your template folder. If your template must be distributed under a different license, note that in the template's README and discuss it in the PR.
 
 ---
 
-## Security & sensitive data
+## Security
 
-Do not include passwords, API keys, or other secrets in your contribution. If you discover a security issue, please open a private issue or contact a maintainer directly — do NOT open a public PR with sensitive information.
+Do not include passwords, API keys, or other secrets. If you discover a security issue, open a private issue or contact a maintainer — do NOT open a public PR with sensitive information.
 
 ---
 
 ## Reporting issues and discussion
 
-- Open an issue for bugs or feature requests; include a minimal reproduction where possible.
-- For discussion about a new template idea, open an issue first to avoid duplicating existing work.
+Open an issue for bugs or feature requests and include a minimal reproduction when possible. For discussion about new template ideas, open an issue first to avoid duplication.
 
 ---
 
-## Linting, validation and helpful tools
+If you want, I can also:
+- Add a small GitHub Actions workflow that validates each `templates/*/template*/` folder contains the required files, or
+- Shorten this guide to a minimal checklist version.
 
-- Validate HTML: https://validator.w3.org/
-- Test responsive layouts using your browser devtools (device toolbar).
-- Optional: run CSS/HTML linters or Prettier/ESLint if you use JS.
-
----
-
-## PR template (suggested copy)
-
-Title: Add template: my-cool-template
-
-Description:
-
-- Short description: ...
-- Preview image: `templates/my-cool-template/preview.png`
-- How to open locally: open `templates/my-cool-template/index.html` in a browser
-
-Checklist:
-- [ ] Template folder and files present
-- [ ] meta.json slug matches folder name
-- [ ] README included and usage documented
-- [ ] Accessibility and responsive checks done
-- [ ] License and third-party attributions included
-
----
-
-Thanks for contributing — we look forward to seeing your templates! If you have any questions before starting, open an issue and tag `maintainers`.
+Thanks for contributing — we look forward to your templates!
