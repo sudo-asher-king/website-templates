@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Morgan | Product Designer Portfolio</title>
+    <meta
+      name="description"
+      content="A dark-mode portfolio website for Alex Morgan, product designer and front-end collaborator."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="#top" aria-label="Alex Morgan home">
+        <span class="brand-mark">AM</span>
+        <span>Alex Morgan</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#showcase">Showcase</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v2.1M12 18.9V21M4.6 4.6l1.5 1.5M17.9 17.9l1.5 1.5M3 12h2.1M18.9 12H21M4.6 19.4l1.5-1.5M17.9 6.1l1.5-1.5" />
+          <circle cx="12" cy="12" r="4.2" />
+        </svg>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell motion-section" aria-labelledby="hero-title">
+        <div class="cursor-orbit" aria-hidden="true"></div>
+        <div class="hero-copy parallax-layer" data-speed="-0.08" data-reveal>
+          <p class="eyebrow">Independent product designer</p>
+          <h1 id="hero-title">Interfaces for ambitious teams who need clarity at speed.</h1>
+          <p class="hero-text">
+            I shape web products from messy first ideas into crisp systems, prototypes, and launch-ready
+            experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View selected work</a>
+            <a class="button secondary" href="#contact">Start a project</a>
+          </div>
+        </div>
+
+        <div class="hero-panel parallax-layer" data-speed="0.12" aria-label="Portfolio snapshot" data-reveal>
+          <div class="orbit-ring ring-one" aria-hidden="true"></div>
+          <div class="orbit-ring ring-two" aria-hidden="true"></div>
+          <div class="panel-topline">
+            <span>2026 reel</span>
+            <span>Available Q3</span>
+          </div>
+          <div class="signal-grid">
+            <div class="signal-card large">
+              <span class="mini-label">Launch impact</span>
+              <strong>38%</strong>
+              <span>activation lift</span>
+            </div>
+            <div class="signal-card visual-a"></div>
+            <div class="signal-card visual-b"></div>
+            <div class="signal-card">
+              <span class="mini-label">Recent focus</span>
+              <strong>Fintech</strong>
+              <span>SaaS, AI tools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell spatial-section motion-section" id="showcase" aria-labelledby="showcase-title">
+        <div class="spatial-bg" aria-hidden="true"></div>
+        <div class="spatial-stage" data-reveal>
+          <div class="spatial-copy">
+            <p class="eyebrow">Animated showcase</p>
+            <h2 id="showcase-title" data-showcase-title>Spatial product systems</h2>
+            <p data-showcase-description>
+              A selected direction for teams that need confident structure, stronger interaction states, and a
+              visual system that can scale past the first launch.
+            </p>
+
+            <div class="metric-stack" aria-label="Showcase metrics">
+              <div class="metric-item">
+                <div class="metric-label">
+                  <span data-showcase-feature-one>Prototype fidelity</span>
+                  <span data-showcase-feature-one-value>92%</span>
+                </div>
+                <div class="meter"><span data-meter-one style="width: 92%"></span></div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-label">
+                  <span data-showcase-feature-two>Design system readiness</span>
+                  <span data-showcase-feature-two-value>86%</span>
+                </div>
+                <div class="meter"><span data-meter-two style="width: 86%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spatial-visual" aria-label="Animated portfolio preview">
+            <div class="spatial-ring outer"></div>
+            <div class="spatial-ring inner"></div>
+            <div class="floating-interface" data-showcase-visual>
+              <span class="interface-top"></span>
+              <span class="interface-card primary-card"></span>
+              <span class="interface-card secondary-card"></span>
+              <span class="interface-rail"></span>
+            </div>
+            <div class="status-pill">
+              <span data-showcase-status-dot></span>
+              <span data-showcase-status>Strategy mode</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="spatial-switcher" role="tablist" aria-label="Showcase mode">
+          <button class="showcase-tab active" type="button" role="tab" aria-selected="true" data-showcase-tab="systems">
+            Systems
+          </button>
+          <button class="showcase-tab" type="button" role="tab" aria-selected="false" data-showcase-tab="launch">
+            Launch
+          </button>
+        </div>
+      </section>
+
+      <section class="section-shell work-section motion-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading parallax-layer" data-speed="-0.05" data-reveal>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Projects built for measurable product movement.</h2>
+        </div>
+
+        <div class="filters" aria-label="Filter projects" data-reveal>
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="product">Product</button>
+          <button class="filter-button" type="button" data-filter="brand">Brand</button>
+          <button class="filter-button" type="button" data-filter="systems">Systems</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="product" data-reveal>
+            <div class="project-media media-aurora">
+              <span class="media-bar"></span>
+              <span class="media-chart"></span>
+              <span class="media-chip"></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Product design</span>
+              <h3>LedgerFlow banking workspace</h3>
+              <p>Redesigned onboarding, account review, and approval states for financial operations teams.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="systems" data-reveal>
+            <div class="project-media media-matrix">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Design system</span>
+              <h3>Northstar component library</h3>
+              <p>Built a token-led system for dashboards, dense tables, charts, and workflow controls.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="brand" data-reveal>
+            <div class="project-media media-editorial">
+              <span class="editorial-title"></span>
+              <span class="editorial-line short"></span>
+              <span class="editorial-line"></span>
+              <span class="editorial-block"></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Identity</span>
+              <h3>Field Notes climate studio</h3>
+              <p>Positioning, visual system, and responsive web direction for a research-led consultancy.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="product" data-reveal>
+            <div class="project-media media-console">
+              <span class="console-header"></span>
+              <span class="console-row"></span>
+              <span class="console-row wide"></span>
+              <span class="console-row"></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">AI interface</span>
+              <h3>PromptOps review console</h3>
+              <p>Designed review queues, confidence states, and exception handling for internal AI workflows.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="systems" data-reveal>
+            <div class="project-media media-canvas">
+              <span class="canvas-node node-a"></span>
+              <span class="canvas-node node-b"></span>
+              <span class="canvas-node node-c"></span>
+              <span class="canvas-line line-a"></span>
+              <span class="canvas-line line-b"></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Workflow design</span>
+              <h3>Atlas planning canvas</h3>
+              <p>Mapped cross-functional planning, dependency tracking, and executive reporting into one workspace.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="brand" data-reveal>
+            <div class="project-media media-studio">
+              <span class="studio-frame"></span>
+              <span class="studio-swatch"></span>
+              <span class="studio-type"></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Portfolio direction</span>
+              <h3>Maison Cobalt studio site</h3>
+              <p>Created a refined editorial portfolio for an architecture studio with project-led navigation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell case-study-section motion-section" aria-labelledby="case-title">
+        <div class="section-heading parallax-layer" data-speed="-0.05" data-reveal>
+          <p class="eyebrow">Case study</p>
+          <h2 id="case-title">LedgerFlow: turning a slow onboarding flow into a confident operating system.</h2>
+        </div>
+        <div class="case-study-grid">
+          <article data-reveal>
+            <span>Challenge</span>
+            <p>New finance operators needed seven disconnected screens to verify accounts, review risk, and approve access.</p>
+          </article>
+          <article data-reveal>
+            <span>Approach</span>
+            <p>I rebuilt the journey around decision moments, progressive disclosure, and a shared status model.</p>
+          </article>
+          <article data-reveal>
+            <span>Outcome</span>
+            <p>Activation rose 38%, support tickets dropped 24%, and the team shipped follow-up workflows twice as fast.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell services-section motion-section" id="services" aria-labelledby="services-title">
+        <div class="section-heading parallax-layer" data-speed="-0.06" data-reveal>
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Focused support for product teams that need senior design momentum.</h2>
+        </div>
+        <div class="services-grid">
+          <article data-reveal>
+            <h3>Product discovery</h3>
+            <p>Problem framing, user journeys, opportunity maps, prototype strategy, and prioritization workshops.</p>
+          </article>
+          <article data-reveal>
+            <h3>Interface design</h3>
+            <p>Responsive web apps, dashboards, marketing pages, interaction states, and high-fidelity prototypes.</p>
+          </article>
+          <article data-reveal>
+            <h3>Design systems</h3>
+            <p>Tokens, component libraries, usage guidelines, accessibility states, and engineer-ready documentation.</p>
+          </article>
+          <article data-reveal>
+            <h3>Launch polish</h3>
+            <p>Motion passes, visual QA, conversion improvements, content tightening, and handoff cleanup before release.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell split-section motion-section" id="about" aria-labelledby="about-title">
+        <div class="parallax-layer" data-speed="-0.06" data-reveal>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">I work where product strategy, interface craft, and front-end reality meet.</h2>
+        </div>
+        <div class="about-copy parallax-layer" data-speed="0.08" data-reveal>
+          <p>
+            My portfolio spans SaaS dashboards, editorial systems, AI-assisted tools, and early-stage brand
+            foundations. I prefer small senior teams, clear goals, and practical prototypes that shorten decision
+            cycles.
+          </p>
+          <dl class="stats">
+            <div><dt>11</dt><dd>years designing digital products</dd></div>
+            <div><dt>54</dt><dd>launches across web and mobile</dd></div>
+            <div><dt>8</dt><dd>design systems shipped</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section-shell timeline-section motion-section" aria-labelledby="timeline-title">
+        <div class="section-heading parallax-layer" data-speed="-0.06" data-reveal>
+          <p class="eyebrow">Experience</p>
+          <h2 id="timeline-title">A background across early products, growing teams, and mature systems.</h2>
+        </div>
+        <div class="timeline">
+          <article data-reveal>
+            <time>2023 - Now</time>
+            <div>
+              <h3>Independent product design partner</h3>
+              <p>Embedded with SaaS, fintech, AI tooling, and climate teams on product strategy and interface execution.</p>
+            </div>
+          </article>
+          <article data-reveal>
+            <time>2019 - 2023</time>
+            <div>
+              <h3>Design lead, Northstar Labs</h3>
+              <p>Led a small design team across analytics, account management, and internal operations platforms.</p>
+            </div>
+          </article>
+          <article data-reveal>
+            <time>2015 - 2019</time>
+            <div>
+              <h3>Senior interface designer, Studio Vale</h3>
+              <p>Shipped brand systems, editorial websites, and conversion-focused product launches for funded startups.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell process-section motion-section" id="process" aria-labelledby="process-title">
+        <div class="section-heading parallax-layer" data-speed="-0.06" data-reveal>
+          <p class="eyebrow">Process</p>
+          <h2 id="process-title">A compact process for getting from ambiguity to shipped work.</h2>
+        </div>
+        <div class="process-list">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Map the product pressure</h3>
+            <p>Clarify user jobs, business constraints, and the smallest useful release shape.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Prototype the decisions</h3>
+            <p>Use fast flows, realistic content, and interaction states to make tradeoffs visible.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Systemize what survives</h3>
+            <p>Turn durable patterns into tokens, components, and handoff notes engineers can use.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell proof-section motion-section" aria-labelledby="proof-title">
+        <div class="section-heading parallax-layer" data-speed="-0.05" data-reveal>
+          <p class="eyebrow">Proof</p>
+          <h2 id="proof-title">Trusted by founders, product leads, and engineering teams.</h2>
+        </div>
+        <div class="proof-grid">
+          <blockquote data-reveal>
+            <p>"Alex helped us see the product clearly. The prototype changed how engineering, sales, and leadership talked about the roadmap."</p>
+            <cite>Priya Nair, VP Product at LedgerFlow</cite>
+          </blockquote>
+          <blockquote data-reveal>
+            <p>"The work felt premium without becoming precious. Every design decision had a reason and a path to implementation."</p>
+            <cite>Mateo Klein, Founder at Field Notes Studio</cite>
+          </blockquote>
+        </div>
+        <div class="logo-row" aria-label="Client list" data-reveal>
+          <span>LedgerFlow</span>
+          <span>PromptOps</span>
+          <span>Northstar</span>
+          <span>Field Notes</span>
+          <span>Atlas</span>
+        </div>
+      </section>
+
+      <section class="section-shell toolkit-section motion-section" aria-labelledby="toolkit-title">
+        <div class="section-heading parallax-layer" data-speed="-0.05" data-reveal>
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="toolkit-title">Tools and methods I use to keep ideas close to implementation.</h2>
+        </div>
+        <div class="toolkit-grid">
+          <span data-reveal>Figma</span>
+          <span data-reveal>FigJam</span>
+          <span data-reveal>HTML/CSS</span>
+          <span data-reveal>JavaScript</span>
+          <span data-reveal>Framer</span>
+          <span data-reveal>Notion</span>
+          <span data-reveal>Linear</span>
+          <span data-reveal>Storybook</span>
+        </div>
+      </section>
+
+      <section class="section-shell contact-section motion-section" id="contact" aria-labelledby="contact-title">
+        <div class="parallax-layer" data-speed="-0.06" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Have a product that needs stronger shape?</h2>
+          <p>Send the rough version. I'll reply with next-step fit, timing, and the best first conversation.</p>
+        </div>
+        <form class="contact-form parallax-layer" data-speed="0.08" data-reveal>
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Project brief
+            <textarea name="message" rows="5" placeholder="What are you trying to design or improve?" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send inquiry</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Alex Morgan</span>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+      <span>Available for selected 2026 projects</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
